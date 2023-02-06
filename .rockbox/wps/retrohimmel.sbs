@@ -1,0 +1,33 @@
+﻿%wd
+%?Lt<>
+%Fl(2,18_iLike.fnt)
+%Fl(3,16_AdoHelveBold.fnt,12)
+%xl(B,Battery.bmp,0,0,22)
+%xl(M,memory.bmp,0,0,6)
+%xl(H,Hold.bmp,0,0)
+%xl(P,Play.bmp,0,0,4)
+#
+#-- hold mode
+#
+%?lh<%Vd(a)|%Vd(b)>
+%V(247,6,10,13,-)
+%?mh<%xd(C)|%?mr<%xd(C)>>
+#
+#--
+#
+%V(50,5,220,18,3)%Vf(FFFFFF)%Vb(FFFFFF)
+#%s%ac%t(10.0)%?bp<%?bc<Lädt...|Vollständig geladen>|%?cs<%?if(%Tp, =, 1)<Cowon D2|iPod>||%?Rp<%Sx(Recording)>|%?tp<%Sx(FM Radio)>|%Sx(Playlist)>>;%t(10.0)%ac%?cf<%cH:%cM|%cl:%cM %cP>
+%s%ac%t(5.0)%?bp<%?bc<Lädt...|Voll geladen>|%?if(%Li, =, 0)<|%?if(%Li, <=, 32)<%Lt|%?if(%Li, =, 33)<%?if(%Tp, =, 1)<|%t(5.0)iPod>|>>>>
+%Vi(-,0,24,320,216,1)%Vf(000000)%Vb(FFFFFF)
+#
+#-- memory
+#
+%Vl(a,9,5,16,16,-)
+%t(0.1)%xd(Ma);%t(0.1)%xd(Mb);%t(0.1)%xd(Mc);%t(0.1)%xd(Md);%t(0.1)%xd(Me);%t(0.1)%xd(Mf)
+#
+#-- battery
+#
+%V(286,6,25,13,-)
+%?bp<%?bc<%t(1.0)%xd(Ba);%t(1.0)%xd(Bb)|%xd(Bc)>|%?bl<%xd(Bd)|%xd(Bd)|%xd(Be)|%xd(Bf)|%xd(Bg)|%xd(Bh)|%xd(Bi)|%xd(Bj)|%xd(Bk)|%xd(Bl)|%xd(Bm)|%xd(Bn)|%xd(Bo)|%xd(Bp)|%xd(Bq)|%xd(Br)|%xd(Bs)|%xd(Bt)|%xd(Bu)|%xd(Bv)>>
+%Vl(b,262,5,18,15,-)
+%?mp<|%xd(Pa)|%xd(Pb)|%xd(Pc)|%xd(Pd)|%?Rp<%xd(Pa)>|%?Rp<%xd(Pb)>|%?tp<%xd(Pa)>|%?tp<%xd(Pb)>>

@@ -1,0 +1,95 @@
+#title:retrohimmel
+#author:steffanossa
+#platfrom:ipod_classic/video(320x240)
+#
+#-- disable_statusbar
+%wd
+#
+#-- load_background
+%X(bg_wps.bmp)
+#
+#-- load_fonts
+%Fl(2,16_AdoHelveBold.fnt)
+%Fl(3,14_AdoHelveBold.fnt,12)
+#
+#-- preload_images
+#%xl(B,bgnacht.bmp,0,0)
+%xl(B,battery.bmp,0,0,22)
+%xl(M,memory.bmp,0,0,6)
+%xl(H,hold.bmp,0,0)
+%xl(P,Play.bmp,0,0,4)
+%xl(R,Repeat.bmp,0,0,4)
+%xl(S,Shuffle.bmp,0,0)
+%xl(J,vol_left.bmp,42,198)
+%xl(K,vol_right.bmp,272,198)
+#
+#-- vol
+%?mv(2.0)<%Vd(h)%xd(J)%xd(K)%?St(volume display)<|%Vd(volume)>|%Vd(d)%Vd(i)>
+#
+#-- current title info
+%ax%V(166,60,149,-,2)%Vf(046462)%Vb(FFFFFF)
+#%ax%V(166,60,145,-,2)%Vf(FFFFFF)%Vb(FFFFFF)
+%s%it
+%ax%V(166,76,149,-,3)%Vf(5C8684)%Vb(FFFFFF)
+%s%al%ia
+%s%al%?id<%id|Unbekanntes Album>
+%s%al%?iy<%iy|ohne Datum>
+%fc (%fb kbps)
+%s%al%?Sr<%pe %Sx(of) %pp|%pp %Sx(of) %pe>
+#
+#-- up nextinfo
+%?pE(15)<%?Fn<%Vd(next)|>|>
+%Vl(next,166,146,149,-,3)%Vf(046462)%Vb(FFFFFF)
+Up next:
+%s%al%Ia
+%s%al%It
+#
+#-- time passed &_time left
+%Vl(i,26,200,270,18,3)%Vf(046462)%Vb(FFFFFF)
+%al%pc%ar-%pr
+#
+#-- vol bar
+#%xl(L,vol-slider.bmp,0,0)
+%Vl(h,61,201,198,10,-)
+%pv(0,0,198,10,vb.bmp)
+#%pv(0,0,222,6,pb-ipod2.bmp,slider,L)
+#
+#-- pb
+#
+%Vl(d,61,201,198,10,-)
+%pb(0,0,198,10,pb.bmp)
+#
+#-- repeat mode
+%V(9,4,19,17,-)
+%?mm<|%xd(Ra)|%xd(Rb)|%xd(Rc)|%xd(Rd)>
+#
+#-- shuffle mode
+%V(37,4,19,15,-)
+%?ps<%xd(S)>
+#
+#-- cover art
+%?C<%Vd(a)|>
+%Vl(a,22,37,140,140,-)
+%?C<%Cd%Cl(0,0,140,140,c,c)|>
+#
+#-- rtc
+%V(100,4,120,18,2)%Vf(FFFFFF)
+%ac%?cf<%cH:%cM|%cl:%cM %cP>
+#
+#-- battery
+%V(286,6,25,13,-)
+%?bp<%?bc<%t(1.0)%xd(Ba);%t(1.0)%xd(Bb)|%xd(Bc)>|%?bl<%xd(Bd)|%xd(Bd)|%xd(Be)|%xd(Bf)|%xd(Bg)|%xd(Bh)|%xd(Bi)|%xd(Bj)|%xd(Bk)|%xd(Bl)|%xd(Bm)|%xd(Bn)|%xd(Bo)|%xd(Bp)|%xd(Bq)|%xd(Br)|%xd(Bs)|%xd(Bt)|%xd(Bu)|%xd(Bv)>>
+#
+#-- memory
+%?lh<%Vd(c)|%Vd(e)>
+%Vl(c,65,5,16,16,-)%Vf(000000)%Vb(FFFFFF)
+%t(0.1)%xd(Ea);%t(0.1)%xd(Eb);%t(0.1)%xd(Ec);%t(0.1)%xd(Ed);%t(0.1)%xd(Ee);%t(0.1)%xd(Ef)
+#
+#-- hold mode
+%Vl(e,241,5,10,13,-)
+%?mh<%xd(H)|%?mr<%xd(H)>>
+#
+#-- play mode
+#
+%V(262,5,18,15,-)
+%?mp<|%xd(Pa)|%xd(Gb)|%xd(Gc)|%xd(Gd)>
